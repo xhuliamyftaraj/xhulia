@@ -20,12 +20,13 @@ app.use(session({
 app.use(express.json({ limit: "1000mb", extended: true }));
 
 
-mongoose.connect('mongodb+srv://git:git@cluster0.h9uun.mongodb.net/MERN?retryWrites=true&w=majority&appName=Cluster0')
-.then((res)=>console.log("DB Connected"))
-.catch((err)=>console.log("Something is wrong "+err))
+mongoose.connect('mongodb+srv://myftarajxhulia:Xhuliaxhuliam03?@cluster0.u8z6p.mongodb.net/MERN?retryWrites=true&w=majority&appName=Cluster0')
+.then((res)=>{
+    console.log("DB start")})
+.catch((err)=>{console.log("Not started")})
 // Test
 app.use('/', (req, res) => {
     res.send("Hello World!")
 })
 
-app.listen(5000, () => console.log("Server started!"))
+app.listen(5000, () => console.log("Server created!"))
